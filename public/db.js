@@ -3,8 +3,7 @@
 // request.onsuccess = event => {
 //   console.log(request.result.name);
 // };
-
-const request = window.indexedDB.open("budgetTracker", 1);
+const request = window.indexedDB.open("budgetTrackerDB", 1);
 var db;
 // Create an object store inside the onupgradeneeded method.
 request.onupgradeneeded = ({ target }) => {
@@ -26,7 +25,10 @@ request.onsuccess = event => {
     }
 };
 
+
+
 function saveRecord(transaction) {
     console.log("hi");
     console.log(transaction);
+
 }

@@ -38,7 +38,7 @@ function checkDatabase() {
                     const transaction = db.transaction(["budgetTracker"], "readwrite");
                     const store = transaction.objectStore("budgetTracker");
                     store.clear();
-                    console.log("hi1")
+
                 });
         }
     }
@@ -55,6 +55,7 @@ function saveRecord(record) {
     const transaction = db.transaction(["budgetTracker"], "readwrite");
     const store = transaction.objectStore("budgetTracker");
     store.add(record);
+
 
 }
 

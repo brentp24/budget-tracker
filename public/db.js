@@ -55,8 +55,6 @@ function saveRecord(record) {
     const transaction = db.transaction(["budgetTracker"], "readwrite");
     const store = transaction.objectStore("budgetTracker");
     store.add(record);
-
-
 }
 
 // listen for app coming back online
